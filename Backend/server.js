@@ -9,14 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'Frontend', 'build')));
-
-// Handle all other routes by serving React's index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Frontend', 'build', 'index.html'));
-});
-
 // Redirect user to Salesforce login
 app.get('/oauth/login', (req, res) => {
   const oauthUrl = getOAuthUrl();
