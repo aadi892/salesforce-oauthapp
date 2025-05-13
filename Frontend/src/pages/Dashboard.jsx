@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   const fetchAccounts = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/accounts', {
+      const response = await axios.get('https://salesforce-backend-5mbb.onrender.com/api/accounts', {
         headers: {
           Authorization: `Bearer ${accessToken}`,
           Instance: instanceUrl,
