@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .home, .login-container {
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  .login-button {
+    padding: 12px 24px;
+    background-color: #0070d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #005fb2;
+  }
+  
