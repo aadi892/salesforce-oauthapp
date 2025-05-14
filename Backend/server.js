@@ -21,7 +21,7 @@ app.get('/callback', async (req, res) => {
 
   try {
     const tokenResponse = await getToken(code);
-    const redirectTo = `${process.env.FRONTEND_REDIRECT}?access_token=${tokenResponse.access_token}&instance_url=${tokenResponse.instance_url}`;
+    const redirectTo = `${process.env.FRONTEND_REDIRECT}/dashboard?access_token=${tokenResponse.access_token}&instance_url=${tokenResponse.instance_url}`;
     res.redirect(redirectTo);
   } catch (err) {
     console.error('OAuth callback error:', err.message);
